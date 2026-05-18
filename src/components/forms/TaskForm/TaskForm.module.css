@@ -1,0 +1,8 @@
+
+
+.input[data-is-error="true"]::placeholder {
+  color: var(--error-400);
+}
+.textarea[data-is-error="true"]::placeholder {
+  color: var(--error-400);
+}

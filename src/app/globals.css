@@ -1,26 +1,136 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary-900: #060f23;
+  --primary-800: #0b1f46;
+  --primary-700: #14367b;
+  --primary-600: #1d4eaf;
+  --primary-500: #2563dc;
+  --primary-400: #618de5;
+  --primary-300: #96b3ee;
+  --primary-200: #cad9f6;
+  --primary-100: #eef2fc;
+  --neutral-900: #0a0a0a;
+  --neutral-800: #1f1f1f;
+  --neutral-700: #3d3d3d;
+  --neutral-600: #5c5c5c;
+  --neutral-500: #7a7a7a;
+  --neutral-400: #999;
+  --neutral-300: #b8b8b8;
+  --neutral-200: #efefef;
+  --neutral-100: #f5f5f5;
+  --success-900: #070e07;
+  --success-800: #1b371e;
+  --success-700: #2e6035;
+  --success-600: #428a4c;
+  --success-500: #52a352;
+  --success-400: #83c38c;
+  --success-300: #acd7b2;
+  --success-200: #d6ebd9;
+  --success-100: #f2f8f3;
+  --warning-900: #140b00;
+  --warning-800: #522d00;
+  --warning-700: #8f4f00;
+  --warning-600: #cc7000;
+  --warning-500: #ff950a;
+  --warning-400: #ffaf47;
+  --warning-300: #ffca85;
+  --warning-200: #ffe4c2;
+  --warning-100: #fff6eb;
+  --error-900: #120602;
+  --error-800: #491708;
+  --error-700: #81290e;
+  --error-600: #b93a13;
+  --error-500: #ee3e17;
+  --error-400: #f27154;
+  --error-300: #f6a08d;
+  --error-200: #fad0c6;
+  --error-100: #fdf0ec;
+
+  --break-point-tablet: 1000px;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary-900: var(--primary-900);
+  --color-primary-800: var(--primary-800);
+  --color-primary-700: var(--primary-700);
+  --color-primary-600: var(--primary-600);
+  --color-primary-500: var(--primary-500);
+  --color-primary-400: var(--primary-400);
+  --color-primary-300: var(--primary-300);
+  --color-primary-200: var(--primary-200);
+  --color-primary-100: var(--primary-100);
+  --color-neutral-900: var(--neutral-900);
+  --color-neutral-800: var(--neutral-800);
+  --color-neutral-700: var(--neutral-700);
+  --color-neutral-600: var(--neutral-600);
+  --color-neutral-500: var(--neutral-500);
+  --color-neutral-400: var(--neutral-400);
+  --color-neutral-300: var(--neutral-300);
+  --color-neutral-200: var(--neutral-200);
+  --color-neutral-100: var(--neutral-100);
+  --color-success-900: var(--success-900);
+  --color-success-800: var(--success-800);
+  --color-success-700: var(--success-700);
+  --color-success-600: var(--success-600);
+  --color-success-500: var(--success-500);
+  --color-success-400: var(--success-400);
+  --color-success-300: var(--success-300);
+  --color-success-200: var(--success-200);
+  --color-success-100: var(--success-100);
+  --color-warning-900: var(--warning-900);
+  --color-warning-800: var(--warning-800);
+  --color-warning-700: var(--warning-700);
+  --color-warning-600: var(--warning-600);
+  --color-warning-500: var(--warning-500);
+  --color-warning-400: var(--warning-400);
+  --color-warning-300: var(--warning-300);
+  --color-warning-200: var(--warning-200);
+  --color-warning-100: var(--warning-100);
+  --color-error-900: var(--error-900);
+  --color-error-800: var(--error-800);
+  --color-error-700: var(--error-700);
+  --color-error-600: var(--error-600);
+  --color-error-500: var(--error-500);
+  --color-error-400: var(--error-400);
+  --color-error-300: var(--error-300);
+  --color-error-200: var(--error-200);
+  --color-error-100: var(--error-100);
+
+  --font-family: var(--font-poppins);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Добавьте в ваш глобальный CSS файл */
+@keyframes custom-enter {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
 }
 
+@keyframes custom-leave {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+}
+
+.animate-custom-enter {
+  animation: custom-enter 0.3s ease-out forwards;
+}
+
+.animate-custom-leave {
+  animation: custom-leave 0.2s ease-in forwards;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-poppins);
 }
