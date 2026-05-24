@@ -100,7 +100,6 @@
   --font-family: var(--font-poppins);
 }
 
-/* Добавьте в ваш глобальный CSS файл */
 @keyframes custom-enter {
   0% {
     transform: scale(0.95);

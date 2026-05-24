@@ -4,7 +4,7 @@ import Spinner from '@/components/common/Spinner/Spinner';
 import { siteConfig } from '@/config/site.config';
 import { ITaskRequest } from '@/interfaces/task.interface';
 import { redirect } from 'next/navigation';
-import {  useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './TaskForm.module.css';
 import toast from 'react-hot-toast';
 import { Task } from '@/generated/prisma/client';
